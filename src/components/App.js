@@ -171,7 +171,7 @@ function App() {
 					<Row className='header my-3 p-3 mb-0 pb-0'>
 						<Col xs={12} md={12} lg={8} xxl={8}>
 							<h1>Bison Solo</h1>
-							<p className='sub-header'>Dropping on <br />12 / 25 / 22</p>
+							<p className='sub-header'>Dropping on <br />12 / 20 / 22</p>
 						</Col>
 						<Col className='flex social-icons'>
 							<a
