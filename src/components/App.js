@@ -119,8 +119,8 @@ function App() {
 			return
 		}
 
-		if (ownerOf.length > 0) {
-			window.alert('You\'ve already minted!')
+		if (ownerOf.length > 3) {
+			window.alert('You\'ve already minted 3 times, that\'s the max!')
 			return
 		}
 
@@ -128,8 +128,9 @@ function App() {
 		if (bisonSolo && account) {
 			setIsMinting(true)
 			setIsError(false)
+			const price = await bisonSolo.methods.cost().call()
 
-			await bisonSolo.methods.mint(1).send({ from: account, value: 0 })
+			await bisonSolo.methods.mint(1).send({ from: account, value: price })
 				.on('confirmation', async () => {
 					const maxSupply = await bisonSolo.methods.maxSupply().call()
 					const totalSupply = await bisonSolo.methods.totalSupply().call()
