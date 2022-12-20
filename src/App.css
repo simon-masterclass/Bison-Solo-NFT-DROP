@@ -62,9 +62,10 @@ main {
 h1 {
     font-family: "Rubik Vinyl";
     font-weight: 500;
-    font-size: clamp(2rem, 10vw, 7rem);
+    font-size: clamp(2rem, 10vw, 8rem);
     transform: rotate(-4deg);
-    padding-left: .8em;
+    padding-left: .1em;
+    padding-top: 2rem;
 }
 
 h2 {
@@ -82,8 +83,8 @@ h3 {
     font-family: "Rubik Vinyl";
     font-weight: 500;
     font-size: clamp(2rem, 5vw, 3rem);
-    transform: rotate(-4deg) translateX(2.5em) translateY(-0.5em);
-    padding-left: .8em;
+    
+    padding-left: .1em;
 }
 
 .countdown {
