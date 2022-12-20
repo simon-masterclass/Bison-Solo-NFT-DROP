@@ -1,0 +1,13 @@
+{
+  "name": "Hidden",
+  "description": "Standby...",
+  "image": "ipfs://QmR6SEZ9VY41DhNoA8qgSWQXg46k5VSPQaZAseBxqB29Wn/0.png",
+  "attributes": [
+    {
+      "trait_type": "Collection",
+      "value": "Smirnov"
+    }
+  ],
+  "external_url": "https://zeroarmy.io/",
+  "compiler": "mintplex.xyz"
+}

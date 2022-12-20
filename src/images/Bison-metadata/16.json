@@ -1,0 +1,29 @@
+{
+    "name": "Bison Solo #16",
+    "description": "A majestic Bison in 3D... but less hairy than the real deal. Visit our website at [www.bison.solo](https://www.bison.solo) where you can ask Ed Smirnov to give you a discount or a dutch rub (NOTE: He prefers the latter).",
+    "image": "ipfs://QmNRCSyKy8F2MCmt4V97RDeGMxKP2ueHoeX1owTpXPXRxw/16.png",
+    "attributes": [
+        {
+            "trait_type": "Collection:",
+            "value": "Smirnov"
+        },
+        {
+            "trait_type": "Body Color:",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "Tail:",
+            "value": "Invisible"
+        },
+        {
+            "trait_type": "Horns:",
+            "value": "Up"
+        },
+        {
+            "trait_type": "Eyes:",
+            "value": "Bright"
+        }
+    ],
+    "external_url": "https://zeroarmy.io/",
+    "compiler": "mintplex.xyz"
+}
