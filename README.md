@@ -1,11 +1,19 @@
-# Open Punks
+<!-- @format -->
+
+# Bison Solo
+
+This sample test template will be used to deploy a unique NFT collection called
+Bison Solo to Ethereum Mainnet. My client has agreed to allow the use of this
+template to boost my resume. Special thanks to everyone involved with this
+amazing NFT drop - to the MOOOON! :)
 
 ## Technology Stack & Tools
 
 - Solidity (Writing Smart Contract)
 - Javascript (React & Testing)
 - [Web3](https://web3js.readthedocs.io/en/v1.5.2/) (Blockchain Interaction)
-- [Truffle](https://www.trufflesuite.com/docs/truffle/overview) (Development Framework)
+- [Truffle](https://www.trufflesuite.com/docs/truffle/overview) (Development
+  Framework)
 - [Ganache](https://www.trufflesuite.com/ganache) (For Local Blockchain)
 - [Infura.io](https://infura.io/) (For copying the Ethereum mainnet)
 - [MetaMask](https://metamask.io/) (Ethereum Wallet)
@@ -13,36 +21,50 @@
 - [Fleek](https://fleek.co/) (Website Deployment)
 
 ## Requirements For Initial Setup
+
 - Install [NodeJS](https://nodejs.org/en/), Recommended version is 14.16.0
 - Install [MetaMask](https://metamask.io/) in your browser.
 
 ## Setting Up
+
 ### 1. Clone/Download the Repository
 
 ### 2. Install Dependencies:
+
 `$ npm install `
 
 ### 3. Setup .env File
-Create a .env file or rename the .env.example file, and update the values. The API & IPFS keys are technically optional for local testing, if you plan to deploy to the testnet or mainnet, you'll need to update those values.
+
+Create a .env file or rename the .env.example file, and update the values. The
+API & IPFS keys are technically optional for local testing, if you plan to
+deploy to the testnet or mainnet, you'll need to update those values.
 
 ### 4. Start Ganache
+
 `$ npx ganache -p 7545 `
 
 ### 5. Test Smart Contract
+
 `$ npx truffle test`
 
 ### 6. Migrate Smart Contracts
-In a separate terminal run:
-`$ npx truffle migrate --reset`
+
+In a separate terminal run: `$ npx truffle migrate --reset`
 
 ### 7. Run Frontend Application
-In another separate terminal run:
-`$ npm start`
+
+In another separate terminal run: `$ npm start`
 
 ## Preparing for Contract Deployment
-- Create or log in to your [Infura.io](https://infura.io/login) account and create a new project, and save your project ID located in your project settings, you'll need this if deploying to Ethereum Mainnet, or Goerli Testnet.
 
-- If deploying to Polygon, you may need to setup the network in MetaMask. To do this, open MetaMask, in the top right click on your profile icon -> Settings -> Networks -> Add Network. 
+- Create or log in to your [Infura.io](https://infura.io/login) account and
+  create a new project, and save your project ID located in your project
+  settings, you'll need this if deploying to Ethereum Mainnet, or Goerli
+  Testnet.
+
+- If deploying to Polygon, you may need to setup the network in MetaMask. To do
+  this, open MetaMask, in the top right click on your profile icon -> Settings
+  -> Networks -> Add Network.
   - For **Polygon Mainnet** fill in the following:
     1. **Network Name**: Polygon
     2. **New RPC URL**: https://rpc-mainnet.maticvigil.com/
@@ -58,65 +80,70 @@ In another separate terminal run:
 
 ### Funding your MetaMask Wallet
 
-- If deploying to Polygon Mainnet, you will need to fund your MetaMask account with MATIC on the polygon chain, How you decide to transfer/fund is entirely upto you. Keep in mind if you have MATIC currently on the Ethereum Mainnet, you will need to bridge your MATIC over to the polygon chain. You can do this by visiting [https://wallet.polygon.technology/](https://wallet.polygon.technology/), also keep in mind you will have to have ETH in your account to cover gas fees!
+- If deploying to Polygon Mainnet, you will need to fund your MetaMask account
+  with MATIC on the polygon chain, How you decide to transfer/fund is entirely
+  upto you. Keep in mind if you have MATIC currently on the Ethereum Mainnet,
+  you will need to bridge your MATIC over to the polygon chain. You can do this
+  by visiting
+  [https://wallet.polygon.technology/](https://wallet.polygon.technology/), also
+  keep in mind you will have to have ETH in your account to cover gas fees!
 
-- If deploying to Goerli testnet, you may use this ETH faucet to fund your account: [https://goerlifaucet.com/](https://goerlifaucet.com/).
+- If deploying to Goerli testnet, you may use this ETH faucet to fund your
+  account: [https://goerlifaucet.com/](https://goerlifaucet.com/).
 
-- If deploying to Polygon Mumbai testnet, you may use this MATIC faucet: [https://faucet.polygon.technology/](https://faucet.polygon.technology/)
+- If deploying to Polygon Mumbai testnet, you may use this MATIC faucet:
+  [https://faucet.polygon.technology/](https://faucet.polygon.technology/)
 
 ### 1. Setup your .env file
-Create a .env file in the root directory of your project, and fill in the following:
-- DEPLOYER_PRIVATE_KEY="YOUR_PRIVATE_KEY"
-- INFURA_API_KEY="PROJECT_ID"
-- ETHERSCAN_API_KEY="API_TOKEN"
 
-- PROJECT_NAME="YOUR_PROJECT_NAME"
-- PROJECT_SYMBOL="YOUR_PROJECT_SYMBOL"
-- MINT_COST=0
-- MAX_SUPPLY=1000
-
-- IPFS_IMAGE_METADATA_CID="IPFS_CID"
-- IPFS_HIDDEN_IMAGE_METADATA_CID="IPFS_CID"
-- NFT_MINT_DATE="Oct 27, 2021 20:00:00"
+Create a .env file in the root directory and copy/paste the variables from
+.env.example - be sure to fill in the missing info with your personal project
+information.
 
 ### 2. Run your migrations
+
 - For Goerli testnet: `npx truffle migrate --reset --network goerli`
 - For Polygon Mainnet: `npx truffle migrate --reset --network matic`
 
 ### 3. Verify your contracts
-- For Goerli testnet: `npx truffle run verify OpenPunks --network goerli`
-- For Polygon Mainnet: `npx truffle run verify OpenPunks --network matic`
+
+- For Goerli testnet: `npx truffle run verify BisonSolo --network goerli`
+- For Polygon Mainnet: `npx truffle run verify BisonSolo --network matic`
 
 ## Preparing for Frontend Deployment
+
 ### 1. Create or Login to your GitHub account
 
 ### 2. Create a new repository
-Input the name of your project, and a description if you wish. You may also choose to make the repository public or private
+
+Input the name of your project, and a description if you wish. You may also
+choose to make the repository public or private
 
 ### 3. Commit your code
-If you have downloaded this code, you may need to initialize it as a git repository, to do this back in your terminal run:
-`$ git init`
 
-Add files for staging:
-`$ git add .`
+If you have downloaded this code, you may need to initialize it as a git
+repository, to do this back in your terminal run: `$ git init`
 
-This will ready your files for the commit, you may see if they have been added by running:
-`$ git status`
+Add files for staging: `$ git add .`
 
-Finally commit your code
-`$ git commit -m "Deployment Setup"`
+This will ready your files for the commit, you may see if they have been added
+by running: `$ git status`
+
+Finally commit your code `$ git commit -m "Deployment Setup"`
 
 ### 4. Update & Push to Remote URL
-If you cloned from a repository, go ahead and update the origin link to the repository you created on GitHub by running:
+
+If you cloned from a repository, go ahead and update the origin link to the
+repository you created on GitHub by running:
 `$ git remote set-url origin <YOUR-GITHUB-REPO-LINK>`
 
 Otherwise run this command instead:
 `$ git remote add origin <YOUR-GITHUB-REPO-LINK>`
 
-Finally, push the code to the repoository:
-`$ git push origin master`
+Finally, push the code to the repoository: `$ git push origin master`
 
 ### 5. Create or sign in to your Fleek account
+
 Easiest option is to sign in with your GitHub account.
 
 Click on Add new site & Connect with GitHub
@@ -125,4 +152,5 @@ Configure and select your repo to deploy
 
 For deploy location, select IPFS hosting
 
-On the build options and deploy tab, under the section Basic Build Settings, for framework select Create React App, then click on Deploy site.
+On the build options and deploy tab, under the section Basic Build Settings, for
+framework select Create React App, then click on Deploy site.
