@@ -38,6 +38,7 @@ function App() {
 	const [revealTime, setRevealTime] = useState(0)
 
 	const [counter, setCounter] = useState(7)
+	const [priceNFT, setPriceNFT] = useState(0)
 	const [isCycling, setIsCycling] = useState(false)
 
 	const loadBlockchainData = async (_web3, _account, _networkId) => {
@@ -52,6 +53,10 @@ function App() {
 
 			const allowMintingAfter = await bisonSolo.methods.allowMintingAfter().call()
 			const timeDeployed = await bisonSolo.methods.timeDeployed().call()
+			const price = await bisonSolo.methods.cost().call()
+			setPriceNFT(price)
+
+
 			setRevealTime((Number(timeDeployed) + Number(allowMintingAfter)).toString() + '000')
 
 			if (_account) {
@@ -128,9 +133,9 @@ function App() {
 		if (bisonSolo && account) {
 			setIsMinting(true)
 			setIsError(false)
-			const price = await bisonSolo.methods.cost().call()
+			
 
-			await bisonSolo.methods.mint(1).send({ from: account, value: price })
+			await bisonSolo.methods.mint(1).send({ from: account, value: priceNFT })
 				.on('confirmation', async () => {
 					const maxSupply = await bisonSolo.methods.maxSupply().call()
 					const totalSupply = await bisonSolo.methods.totalSupply().call()
@@ -234,6 +239,7 @@ function App() {
 										<li>Free minting on Goerli testnet</li>
 										<li>Viewable on Opensea shortly after minting</li>
 									</ul>
+										<h3>Price per NFT: <br/> {priceNFT/1000000000000000000} ETH</h3>
 
 									{isMinting ? (
 										<Spinner animation="border" className='p-3 m-2' />
