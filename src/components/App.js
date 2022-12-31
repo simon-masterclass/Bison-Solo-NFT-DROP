@@ -210,7 +210,7 @@ function App() {
 							/>
 						</Col>
 						<Col md={5} lg={4} xl={5} xxl={4}>
-							{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown mx-3' />}
+							{(revealTime - currentTime) > 0 && revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown mx-3' />}
 							<p className='text'>
 							The Bison Solo NFT collection is a rare, one of a kind AI rendered artwork from the mind of Eduard Smirnov. Each Bison NFT comes with a special gift. Visit 
 							<a href="#about">www.bison.solo</a> for details.
@@ -232,10 +232,14 @@ function App() {
 								<p>{message}</p>
 							) : (
 								<div>
-									<h3>Mint your NFT in</h3>
-									{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown' />}
+									{(revealTime - currentTime) < 0 ? (<h3>Mint your Bison Solo NFT now!</h3>
+									):(
+										<><h3>Mint your NFT in</h3>
+										{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown' />}
+										</>
+									)}
 									<ul>
-										<li>25 generated bisons using an AI art generator</li>
+										<li>25 generated bisons using Artificial Intelligence</li>
 										<li>Free minting on Goerli testnet</li>
 										<li>Viewable on Opensea shortly after minting</li>
 									</ul>
