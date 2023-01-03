@@ -204,7 +204,7 @@ function App() {
 					<Row className='flex m-3'>
 						<Col md={5} lg={4} xl={5} xxl={4} className='text-center'>
 							<img
-								src={`https://ipfs.io/ipfs/QmNRCSyKy8F2MCmt4V97RDeGMxKP2ueHoeX1owTpXPXRxw/${counter}.png`}
+								src={require(`../images/Bison-pics/${counter}.png`)} //https://ipfs.io/ipfs/QmNRCSyKy8F2MCmt4V97RDeGMxKP2ueHoeX1owTpXPXRxw
 								alt="Bison Solo"
 								className='showcase'
 							/>
