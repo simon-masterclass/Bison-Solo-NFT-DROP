@@ -40,6 +40,7 @@ function App() {
 	const [counter, setCounter] = useState(7)
 	const [priceNFT, setPriceNFT] = useState(0)
 	const [isCycling, setIsCycling] = useState(false)
+	const [numberOfNFTs, setNumberOfNFTs] = useState(1)
 
 	const loadBlockchainData = async (_web3, _account, _networkId) => {
 		// Fetch Contract, Data, etc.
@@ -110,6 +111,16 @@ function App() {
 		}
 	}
 
+	const incrementMinus = () => {
+		if (numberOfNFTs <= 1) return
+		setNumberOfNFTs(numberOfNFTs - 1)
+	}
+	
+	const incrementPlus = () => {
+		if (numberOfNFTs >= 3) return
+		setNumberOfNFTs(numberOfNFTs + 1)
+	}
+	
 	// MetaMask Login/Connect
 	const web3Handler = async () => {
 		if (web3) {
@@ -244,6 +255,11 @@ function App() {
 										<li>Viewable on Opensea shortly after minting</li>
 									</ul>
 										<h3>Price per NFT: <br/> {priceNFT/1000000000000000000} ETH</h3>
+
+										<button onClick={incrementMinus}>-</button>
+										{"       "} {numberOfNFTs} {"       "}
+										<button onClick={incrementPlus}>+</button>
+										<br />
 
 									{isMinting ? (
 										<Spinner animation="border" className='p-3 m-2' />
