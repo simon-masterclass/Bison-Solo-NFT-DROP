@@ -146,7 +146,7 @@ function App() {
 			setIsError(false)
 			
 
-			await bisonSolo.methods.mint(1).send({ from: account, value: priceNFT })
+			await bisonSolo.methods.mint(numberOfNFTs).send({ from: account, value: priceNFT })
 				.on('confirmation', async () => {
 					const maxSupply = await bisonSolo.methods.maxSupply().call()
 					const totalSupply = await bisonSolo.methods.totalSupply().call()
@@ -253,14 +253,19 @@ function App() {
 										<li>25 generated bisons using Artificial Intelligence</li>
 										<li>Free minting on Goerli testnet</li>
 										<li>Viewable on Opensea shortly after minting</li>
+										<li>Price per NFT: {priceNFT/1000000000000000000} ETH</li>
 									</ul>
-										<h3>Price per NFT: <br/> {priceNFT/1000000000000000000} ETH</h3>
-
-										<button onClick={incrementMinus}>-</button>
-										{"       "} {numberOfNFTs} {"       "}
-										<button onClick={incrementPlus}>+</button>
-										<br />
-
+										
+									<h4>
+										<button onClick={incrementMinus} className='increment-button mt-1'>-</button>
+											{' '}{numberOfNFTs}{' '} 
+										<button onClick={incrementPlus} className='increment-button mt-1'>+</button>
+									</h4>
+										<p>Max Mint Amount: 3</p>
+										
+										<h3>{(priceNFT/1000000000000000000)*numberOfNFTs} ETH</h3>
+										<br/>
+									
 									{isMinting ? (
 										<Spinner animation="border" className='p-3 m-2' />
 									) : (
