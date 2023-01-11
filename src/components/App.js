@@ -146,7 +146,7 @@ function App() {
 			setIsError(false)
 			
 
-			await bisonSolo.methods.mint(numberOfNFTs).send({ from: account, value: priceNFT })
+			await bisonSolo.methods.mint(numberOfNFTs).send({ from: account, value: priceNFT*numberOfNFTs })
 				.on('confirmation', async () => {
 					const maxSupply = await bisonSolo.methods.maxSupply().call()
 					const totalSupply = await bisonSolo.methods.totalSupply().call()
