@@ -1,5 +1,5 @@
 {
-  "name": "open_punks",
+  "name": "bison_solo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -60,7 +60,7 @@
     "stream-http": "^3.2.0",
     "url": "^0.11.0"
   },
-  "description": "Open Punks NFT Collection",
+  "description": "Bison Solo NFT Collection",
   "main": "config-overrides.js",
   "author": "",
   "license": "ISC"

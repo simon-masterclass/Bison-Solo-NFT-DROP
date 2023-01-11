@@ -131,17 +131,6 @@ a:hover {
     transition: all 500ms ease;
 }
 
-.nav-button {
-    margin: .5em 0;
-}
-
-.mint-button {
-    min-width: 150px;
-    max-width: 225px;
-
-    overflow: hidden;
-}
-
 .increment-button {
     min-width: 100px;
     max-width: 120px;
@@ -158,6 +147,17 @@ a:hover {
 
     font-family: Helvetica, sans-serif;
     font-weight: 777;
+
+    overflow: hidden;
+}
+
+.nav-button {
+    margin: .5em 0;
+}
+
+.mint-button {
+    min-width: 150px;
+    max-width: 225px;
 
     overflow: hidden;
 }
