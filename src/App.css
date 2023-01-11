@@ -151,6 +151,11 @@ a:hover {
     overflow: hidden;
 }
 
+.plusminusbuttons {
+    justify-content: center;
+    align-items: center;
+}
+
 .nav-button {
     margin: .5em 0;
 }

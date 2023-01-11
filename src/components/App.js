@@ -244,7 +244,7 @@ function App() {
 							) : (
 								<div>
 									{(revealTime - currentTime) < 0 ? (<h3>Mint your Bison Solo NFT now!</h3>
-									):(
+									):( 
 										<><h3>Mint your NFT in</h3>
 										{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown' />}
 										</>
@@ -253,17 +253,21 @@ function App() {
 										<li>25 generated bisons using Artificial Intelligence</li>
 										<li>Free minting on Goerli testnet</li>
 										<li>Viewable on Opensea shortly after minting</li>
-										<li>Price per NFT: {priceNFT/1000000000000000000} ETH</li>
+										{/* <li>Price per NFT: {priceNFT/1000000000000000000 || 0.000111} ETH</li> */}
+										<li>Max Mint Amount: 3 NFTs</li>
 									</ul>
 										
-									<h4>
+									<div className='plusminusbuttons'>
+										<h3>How many NFTs would you like to mint?</h3>
+										<h5>
 										<button onClick={incrementMinus} className='increment-button mt-1'>-</button>
 											{' '}{numberOfNFTs}{' '} 
 										<button onClick={incrementPlus} className='increment-button mt-1'>+</button>
-									</h4>
-										<p>Max Mint Amount: 3</p>
-										
-										<h3>{(priceNFT/1000000000000000000)*numberOfNFTs} ETH</h3>
+										</h5>
+										<p></p>
+									</div>
+
+										<h3>TOTAL: {(priceNFT/1000000000000000000)*numberOfNFTs || 0.000111*numberOfNFTs} ETH</h3>
 										<br/>
 									
 									{isMinting ? (
