@@ -28,7 +28,7 @@ function App() {
 	const [ownerOf, setOwnerOf] = useState([])
 
 	const [explorerURL, setExplorerURL] = useState('https://goerli.etherscan.io')
-	const [openseaURL, setOpenseaURL] = useState('https://testnets-api.opensea.io/api/v1')
+	const [openseaURL, setOpenseaURL] = useState('https://testnets.opensea.io/') //https://testnets-api.opensea.io/api/v1
 
 	const [isMinting, setIsMinting] = useState(false)
 	const [isError, setIsError] = useState(false)
@@ -198,7 +198,7 @@ function App() {
 								<img src={twitter} alt="Twitter" />
 							</a>
 							<a
-								href="https://www.instagram.com/zeroarmy_org/"
+								href="https://www.instagram.com/zeroarmy_org"
 								target='_blank'
 								className='circle flex button'>
 								<img src={instagram} alt="Instagram" />
@@ -282,7 +282,7 @@ function App() {
 												href={`${openseaURL}/assets/${bisonSolo._address}/${ownerOf[0]}`}
 												target='_blank'
 												style={{ display: 'inline-block', marginLeft: '3px' }}>
-												OpenSea
+												<u>OpenSea</u>
 											</a>
 										</small></p>}
 								</div>

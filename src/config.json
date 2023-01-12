@@ -1,5 +1,5 @@
 {
-    "PROJECT_NAME": "BisonSolo",
+    "PROJECT_NAME": "bison-solo",
     "NETWORKS": {
         "1": {
             "name": "Ethereum Mainnet",
